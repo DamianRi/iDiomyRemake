@@ -1,4 +1,5 @@
 <?php
+
 // Initialize the session
 session_start();
  
@@ -15,6 +16,8 @@ require_once "config.php";
 $username = $password = "";
 $username_err = $password_err = "";
  
+
+
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
@@ -23,6 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username_err = "Please enter username.";
     } else{
         $username = trim($_POST["username"]);
+        $username = strip_tags(trim($username));
     }
     
     // Check if password is empty
@@ -30,6 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $password_err = "Please enter your password.";
     } else{
         $password = trim($_POST["password"]);
+        $password = strip_tags(trim($password));
     }
     
     // Validate credentials
