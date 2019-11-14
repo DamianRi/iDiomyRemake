@@ -16,6 +16,24 @@
   text-align: left;
 }
 
+.body .logout {
+  display: block;
+  width: 15%;
+  min-width: 50px;
+  height: auto;
+  min-height: 20px;
+  padding: 0 5px;
+  margin: 0 auto;
+  font-family: 'Denk One', sans-serif;
+  font-size: 1.5em;
+  background-color: #601d1f;
+  border-radius: 999px;
+  color: white;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .body {
     background-color: #77aa77;
