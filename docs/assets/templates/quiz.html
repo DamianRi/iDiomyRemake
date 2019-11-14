@@ -1,0 +1,236 @@
+<script id="quiz" type="text/x-jsrender">
+  <div id="quiz-data" data-category="{{:category}}" data-quiz="{{:id}}">
+    <div class="nivel">{{:title}} <img id="bandera-idioma" class="bandera-quiz" src=""/> </div>
+
+    <div id="intro">
+      {{for intro}}
+      
+      <div class="intro item {{if id != 1}}hide {{else}} fadeInUp {{/if}}">
+          <h2 class="title">Intro {{:id}} / 3</h2>
+          <div class="boton">
+            <button id="menu-levels" class="botones volver-niveles animated pulse" title="Volver a los Niveles">
+                <div class="imagen-niveles">
+                </div>
+              </button>            
+            <button id="menu" class="btn-back animated pulse" title="Volver a Home">
+              <div class="imagen">
+              </div>
+            </button>
+            <button class="botones skip">Omitir Intros</button>
+          </div>
+          <div class="picture">
+            <img src="{{:img}}" class="fluid-img">
+          </div>
+          <div class="content">
+            <p>
+              {{:text}}
+            </p>
+          </div>
+          <button class="botones next-intro" data-target="{{:id}}">Siguiente Intro</button>
+      </div>
+      {{/for}}
+    </div>
+    
+    <div id="items" class="quiz category-{{:category}} test-{{:id}} items hide"></div>
+    <div class="can item-wrapper animated hide">
+      <div id="message">Mensaje</div>
+      <img src="assets/img/perro.png" alt="mensaje" class="fluid-img">
+      <div class="boton">
+          <button class="botones next-button animated tada" title="Siguiente pregunta"></button>
+        </div>
+    </div>
+    
+    <div class="game-card item-wrapper animated hide">
+      <h2 class="title">Memorama</h2>
+
+      <div id="GameSpace" class="game-space grid-container">
+        <div class="memory-card " data-framework="1">
+          <img class="front-face" src="assets/img/game-svg/001-plant-1.svg" alt="Plant" />
+          <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+        </div>
+        <div class="memory-card " data-framework="1">
+          <img class="front-face" src="assets/img/game-svg/001-plant-1.svg" alt="Plant" />
+          <img class="back-face" src="assets/img/iconos/block.svg" alt="" />
+        </div>
+  
+        <div class="memory-card " data-framework="2">
+          <img class="front-face" src="assets/img/game-svg/002-koala.svg" alt="Koala" />
+          <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+        </div>
+        <div class="memory-card " data-framework="2">
+          <img class="front-face" src="assets/img/game-svg/002-koala.svg" alt="Koala" />
+          <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+        </div>
+  
+        <div class="memory-card" data-framework="3">
+          <img class="front-face" src="assets/img/game-svg/003-chipmunk.svg" alt="Chipmunk" />
+          <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+        </div>
+        <div class="memory-card" data-framework="3">
+          <img class="front-face" src="assets/img/game-svg/003-chipmunk.svg" alt="Chipmunk" />
+          <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+        </div>
+  
+        <div class="memory-card" data-framework="4">
+          <img class="front-face" src="assets/img/game-svg/006-rabbit-1.svg" alt="Rabbit" />
+          <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+        </div>
+        <div class="memory-card" data-framework="4">
+            <img class="front-face" src="assets/img/game-svg/006-rabbit-1.svg" alt="Rabbit" />
+            <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+          </div>
+  
+        <div class="memory-card" data-framework="5">
+          <img class="front-face" src="assets/img/game-svg/059-rainbow.svg" alt="Rainbow" />
+          <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+        </div>
+        <div class="memory-card" data-framework="5">
+            <img class="front-face" src="assets/img/game-svg/059-rainbow.svg" alt="Rainbow" />
+            <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+        </div>
+  
+        <div class="memory-card" data-framework="6">
+          <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+          <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+        </div>
+        <div class="memory-card" data-framework="6">
+            <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+            <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+        </div>
+
+      <div class="memory-card" data-framework="7">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+      </div>
+      <div class="memory-card" data-framework="7">
+          <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+          <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+      </div>
+
+    <div class="memory-card" data-framework="8">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="8">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+    <div class="memory-card" data-framework="9">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="9">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+    <div class="memory-card" data-framework="10">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="10">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+    <div class="memory-card" data-framework="11">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="11">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+    <div class="memory-card" data-framework="12">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="12">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+    <div class="memory-card" data-framework="13">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="13">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+    <div class="memory-card" data-framework="14">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="14">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+    <div class="memory-card" data-framework="15">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="15">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+    <div class="memory-card" data-framework="16">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="16">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+    <div class="memory-card" data-framework="17">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="17">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+    <div class="memory-card" data-framework="18">
+      <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+      <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+    <div class="memory-card" data-framework="18">
+        <img class="front-face" src="assets/img/game-svg/042-snowman-1.svg" alt="Snowman" />
+        <img class="back-face" src="assets/img/iconos/block.svg" alt="block" />
+    </div>
+
+
+  </div>
+
+
+      <div class="boton">
+          <button id="quitar-juego" class="botones next-button" title="Ver Resumen">Ver Resumen</button>
+        </div>
+
+    </div>
+
+    <div class="resume item-wrapper animated hide">
+      <h2 class="title">Resumen</h2>
+      <div class="stars"></div>
+      <div class="result-message"></div>
+      <div class="buttons">
+        <button id="reload" class="botones buton-resume volver-intros again animated pulse" title="Repetir Nivel">
+          <img src="assets/img/iconos/return-white.png">
+        </button>
+        <button id="menu" class="buton-resume home animated pulse" title="Ir a Home">
+          <img src="assets/img/iconos/home-blanco.png">
+        </button>
+        <button id="siguienteNivel" class="botones buton-resume siguienteNivel animated pulse {{if id == 3}}hide {{/if}}" title="Siguiente Nivel">
+            <img src="assets/img/iconos/next-white.png">
+        </button>
+      </div>
+    </div>
+  </div>
+</script>
