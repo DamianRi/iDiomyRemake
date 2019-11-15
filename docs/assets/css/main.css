@@ -23,7 +23,7 @@
   height: auto;
   min-height: 20px;
   padding: 0 5px;
-  margin: 0 auto;
+  margin: 5px;
   font-family: 'Denk One', sans-serif;
   font-size: 1.5em;
   background-color: #601d1f;
@@ -63,6 +63,24 @@
     -webkit-transition: 2s;
     transition: 2s;
   }
+}
+
+.body-second-style .logout {
+  display: block;
+  width: 15%;
+  min-width: 50px;
+  height: auto;
+  min-height: 20px;
+  padding: 0 5px;
+  margin: 5px;
+  font-family: 'Denk One', sans-serif;
+  font-size: 1.5em;
+  background-color: #601d1f;
+  border-radius: 999px;
+  color: white;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  text-align: center;
 }
 
 #bandera-idioma {

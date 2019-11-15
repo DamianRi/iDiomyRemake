@@ -1,0 +1,88 @@
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "KidsZone";
+  src: url("./../css/Kids Zone.woff");
+}
+
+.body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.5em;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #9ccc9c;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .body {
+    background-color: #90b890;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+
+.idiomy-tittle {
+  font-family: "KidsZone";
+}
+
+.wrapper {
+  width: 25%;
+  min-width: 400px;
+  margin: 15% auto;
+  font-size: 1em;
+  font-family: "Denk One";
+}
+
+.wrapper .button-register {
+  padding: 10px;
+  width: 49%;
+  border: none;
+  background-color: #003333;
+  color: white;
+  border-radius: 999px;
+  -webkit-box-shadow: 0p 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0p 5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper .button-register:hover {
+  background-color: #157979;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper .button-clear {
+  padding: 10px;
+  width: 49%;
+  border: 1px solid #bbbbbb;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #212529;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper .button-clear:hover {
+  background-color: #bbbbbb;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    width: 90%;
+    min-width: 50%;
+    margin: 0 auto;
+    font-size: 1em;
+    font-family: "Denk One";
+  }
+}
+/*# sourceMappingURL=register.css.map */

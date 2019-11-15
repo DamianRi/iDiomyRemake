@@ -102,14 +102,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
+    <title>Registro | iDiomy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Denk+One" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/register.css">
+
 </head>
-<body>
+<body class="body"> 
     <div class="wrapper">
         <h2>Registro</h2>
         <p>Por favor llena los campos para crear una cuenta.</p>
@@ -130,8 +130,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Registrase">
-                <input type="reset" class="btn btn-default" value="Reiniciar">
+                <input type="submit" class="button-register" value="Registrase">
+                <input type="reset" class="button-clear" value="Reiniciar">
             </div>
             <p>¿ Ya tienes una cuenta ? <a href="login.php">Inicia Sesión</a>.</p>
         </form>

@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter username.";
+        $username_err = "Por favor ingresa tu username.";
     } else{
         $username = trim($_POST["username"]);
         $username = strip_tags(trim($username));
@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Check if password is empty
     if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter your password.";
+        $password_err = "Por favor ingresa tu password.";
     } else{
         $password = trim($_POST["password"]);
         $password = strip_tags(trim($password));
@@ -97,18 +97,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
+    <title>Iniciar Sesión | iDiomy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    <meta name="description" content="iDiomy">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Denk+One" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
-<body>
+<body class="body">
     <div class="wrapper">
+        <div class="logo">
+        <img class="imagen-logo" src="assets/img/logo.png" alt="iDiomy!" class="fluid-img">
+        </div>
+        <h1 class="idiomy-tittle">iDiomy</h1><br>
         <h2>Iniciar Sesión</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+            <div class=" <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
                 <span class="help-block"><?php echo $username_err; ?></span>
@@ -119,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Entrar">
+                <input type="submit" class="button-in" value="Entrar">
             </div>
             <p>¿ No tienes una cuenta ? <a href="register.php">Registrate</a>.</p>
         </form>

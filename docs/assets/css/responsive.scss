@@ -18,6 +18,24 @@
         line-height: 1.5;
         color: #212529;
         text-align: left;
+
+        .logout{
+            display: block;
+            width: 30%;
+            min-width: 50px;
+            height: auto;
+            min-height: 20px;
+            padding: 0 5px;
+            margin:  5px;
+            font-family: 'Denk One', sans-serif;
+            font-size: 1.2em;
+            background-color: #601d1f;
+            border-radius: 999px;
+            color: white;
+            text-decoration-line: none;
+            text-align: center;
+          }
+
     }
     .body-second-style {
         padding: 0;
@@ -35,6 +53,25 @@
         background-attachment: fixed;
         background-size: 115% auto;
         transition: 2s;
+
+        .logout{
+            display: block;
+            width: 30%;
+            min-width: 50px;
+            height: auto;
+            min-height: 20px;
+            padding: 0 5px;
+            margin:  5px;
+            font-family: 'Denk One', sans-serif;
+            font-size: 1.2em;
+            background-color: #601d1f;
+            border-radius: 999px;
+            color: white;
+            text-decoration-line: none;
+            text-align: center;
+          }
+
+
     }      
 
     .welcome{
