@@ -32,6 +32,32 @@
     text-align: center;
   }
 
+  .user-score{
+    display: block;
+    width: 15%;
+    min-width: 50px;
+    height: auto;
+    min-height: 20px;
+    padding: 0 5px;
+    margin:  5px;
+    font-family: 'Denk One', sans-serif;
+    font-size: 1.5em;
+    background-color: #c0c0c0;
+    border-radius: 2px;
+    text-decoration-line: none;
+    text-align: center;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    img{
+      width: 1em;
+      height: 1em;
+    }
+    p{
+      display: inline;
+    }
+  }
+
 
   @media (min-width: 768px) {
     background-color: #77aa77;
@@ -76,6 +102,31 @@
     color: white;
     text-decoration-line: none;
     text-align: center;
+  }
+  .user-score{
+    display: block;
+    width: 15%;
+    min-width: 50px;
+    height: auto;
+    min-height: 20px;
+    padding: 0 5px;
+    margin:  5px;
+    font-family: 'Denk One', sans-serif;
+    font-size: 1.5em;
+    background-color: #c0c0c0;
+    border-radius: 2px;
+    text-decoration-line: none;
+    text-align: center;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    img{
+      width: 1em;
+      height: 1em;
+    }
+    p{
+      display: inline;
+    }
   }
 }
 
@@ -123,7 +174,6 @@
 
 .welcome {
   font-family: 'Chewy', cursive;
-  padding: 10%;
   font-size: 25px;
   background-color: #cdedf6;
   text-align: center;

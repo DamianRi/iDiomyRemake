@@ -1,7 +1,7 @@
 <?php
 // Initialize the session
 session_start();
- 
+
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
@@ -34,6 +34,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     Debes habilitar javascript en tu navegador!
   </noscript>
   <a class="logout" href="logout.php">Salir</a>
+  <div id="user-score" class="user-score"><img src='assets/img/resultado_quiz/star.png' ><p>Score: <?php echo $_COOKIE["won-score"]?></p></div>
   <div id="container">
   </div>
 

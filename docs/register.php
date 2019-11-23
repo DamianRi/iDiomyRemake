@@ -69,8 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $param_password = strip_tags(trim($password));
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-         
+        $sql = "INSERT INTO users (username, password, score) VALUES (?, ?, 0)";
         if($stmt = mysqli_prepare($link, $sql)){
 
             // Bind variables to the prepared statement as parameters

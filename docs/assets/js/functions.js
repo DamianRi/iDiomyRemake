@@ -4,9 +4,9 @@ var categoriesActuales = {};
 
 function appLoad() {
   if(!localStorage.getItem('skip') === true) {
-    $('#container').load('assets/templates/welcome.html');
+    $('#container').load('assets/templates/welcome.php');
   } else {
-    $('#container').load('assets/templates/panel.html',function(){
+    $('#container').load('assets/templates/panel.php',function(){
       renderIdiomas(idiomas);
       loadImg();
     });

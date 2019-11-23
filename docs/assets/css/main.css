@@ -34,6 +34,35 @@
   text-align: center;
 }
 
+.body .user-score {
+  display: block;
+  width: 15%;
+  min-width: 50px;
+  height: auto;
+  min-height: 20px;
+  padding: 0 5px;
+  margin: 5px;
+  font-family: 'Denk One', sans-serif;
+  font-size: 1.5em;
+  background-color: #c0c0c0;
+  border-radius: 2px;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  text-align: center;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+}
+
+.body .user-score img {
+  width: 1em;
+  height: 1em;
+}
+
+.body .user-score p {
+  display: inline;
+}
+
 @media (min-width: 768px) {
   .body {
     background-color: #77aa77;
@@ -83,6 +112,35 @@
   text-align: center;
 }
 
+.body-second-style .user-score {
+  display: block;
+  width: 15%;
+  min-width: 50px;
+  height: auto;
+  min-height: 20px;
+  padding: 0 5px;
+  margin: 5px;
+  font-family: 'Denk One', sans-serif;
+  font-size: 1.5em;
+  background-color: #c0c0c0;
+  border-radius: 2px;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  text-align: center;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+}
+
+.body-second-style .user-score img {
+  width: 1em;
+  height: 1em;
+}
+
+.body-second-style .user-score p {
+  display: inline;
+}
+
 #bandera-idioma {
   height: 6em;
   float: right;
@@ -126,7 +184,6 @@
 
 .welcome {
   font-family: 'Chewy', cursive;
-  padding: 10%;
   font-size: 25px;
   background-color: #cdedf6;
   text-align: center;

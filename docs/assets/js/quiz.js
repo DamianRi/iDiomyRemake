@@ -10,6 +10,8 @@ var botones = new Audio();
 botones.src = "assets/audio/drip.mp3";
 var current = 0;
 
+
+
 $('#container').on('click', '.answer-button', function(){
   if (!$(".can").hasClass("hide")) return;
   var isCorrect = $(this).checkAnswer();
@@ -58,7 +60,7 @@ function showNext(n) {
 
     var result = parseFloat(points/size);
     var result_percentage = Math.round(result*100)/100;
-
+    var puntosGanados = 0;
     $('.resume').removeClass('hide').addClass('fadeInUp');
     $('.body-second-style').removeClass('body-second-style').addClass('body');
     if(result_percentage === 0){
@@ -70,6 +72,7 @@ function showNext(n) {
       $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
 
     }else if (result_percentage <= .2 && result_percentage > 0){
+      puntosGanados = 1;
       $('.result-message').html("Puedes mejorar. ¡Inténtalo de nuevo! ");
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars img').addClass('animated heartBeat estrellas');  
@@ -78,6 +81,7 @@ function showNext(n) {
       $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
       $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
     }else if (result_percentage <= .4 && result_percentage > .2){
+      puntosGanados = 2;
       $('.result-message').html("¡Muy bien! ");
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
@@ -86,6 +90,7 @@ function showNext(n) {
       $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
       $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
     }else if (result_percentage <= .6 && result_percentage > .4){
+      puntosGanados = 3;
       $('.result-message').html("¡Muy bien! ");
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
@@ -94,6 +99,7 @@ function showNext(n) {
       $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
       $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
     }else if (result_percentage < 1 && result_percentage > .6){
+      puntosGanados = 4;
       $('.result-message').html("¡Muy bien! ");
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
@@ -102,6 +108,7 @@ function showNext(n) {
       $('.stars img').addClass('animated heartBeat estrellas');
       $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
     }else if (result_percentage === 1){
+      puntosGanados = 5;
       $('.result-message').html("¡Felicidades! Demuestra tus habilidades en los demás niveles y categorías.<br>");
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
@@ -110,6 +117,13 @@ function showNext(n) {
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars img').addClass('animated heartBeat estrellas');
     }
+    var ws = getCookie("won-score");
+    var actualScore = parseInt(ws)+puntosGanados;
+    document.cookie = "won-score="+actualScore;
+      //location.reload();
+    //$( "#user-score" ).html("<span><img src='assets/img/resultado_quiz/star.png' ></span>ScoreS: <?php echo $_COOKIE[\"won-score\"]?>");
+    $( "#user-score" ).load(" #user-score > *");
+
   } else if(size-1 < current){
     loadCards();
     $(".game-card").addClass('fadeIn').removeClass('hide');
@@ -180,3 +194,20 @@ $('#container').on('click','#menu', function(){
 $('#container').on('click','.botones', function(){
   botones.play();
 });
+
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}

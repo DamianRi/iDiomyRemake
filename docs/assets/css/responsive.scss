@@ -36,6 +36,32 @@
             text-align: center;
           }
 
+          .user-score{
+            display: block;
+            width: 30%;
+            min-width: 50px;
+            height: auto;
+            min-height: 20px;
+            padding: 0 5px;
+            margin:  5px;
+            font-family: 'Denk One', sans-serif;
+            font-size: 1.2em;
+            background-color: #c0c0c0;
+            border-radius: 2px;
+            text-decoration-line: none;
+            text-align: center;
+            top: 0px;
+            right: 0px;
+            position: absolute;
+            img{
+                width: 1em;
+                height: 1em;
+              }
+              p{
+                  display: inline;
+              }
+          }
+
     }
     .body-second-style {
         padding: 0;
@@ -69,6 +95,31 @@
             color: white;
             text-decoration-line: none;
             text-align: center;
+          }
+          .user-score{
+            display: block;
+            width: 30%;
+            min-width: 50px;
+            height: auto;
+            min-height: 20px;
+            padding: 0 5px;
+            margin:  5px;
+            font-family: 'Denk One', sans-serif;
+            font-size: 1.2em;
+            background-color: #c0c0c0;
+            border-radius: 2px;
+            text-decoration-line: none;
+            text-align: center;
+            top: 0px;
+            right: 0px;
+            position: absolute;
+            img{
+                width: 1em;
+                height: 1em;
+              }
+              p{
+                  display: inline;
+              }
           }
 
 
