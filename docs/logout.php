@@ -27,8 +27,7 @@ mysqli_stmt_close($stmt);
         // Unset all of the session variables
 $_SESSION = array();
 setcookie("won-score", '', time() - 42000);
-setcookie("won-score+", '', time() - 42000);
-
+setcookie("username", '', time() - 42000);
 // Destroy the session.
 session_destroy();
  

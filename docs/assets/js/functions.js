@@ -100,7 +100,7 @@ $.fn.volverIntros = function(){
   console.log("Nivel Actual"+nivelActual);
 
   var levels = categoriesActuales.items[nivelActual-1];
-  $('#container').load('assets/templates/quiz.html',
+  $('#container').load('assets/templates/quiz.php',
     function() {
       var quiz = categoriesActuales.items[nivelActual-1].quiz[introActual-1];
       quiz['category'] = nivelActual;
@@ -138,7 +138,7 @@ $.fn.renderQuiz = function (categoryID, quizID){
     var categoryID = this.attr('data-category');
     var quizID = this.attr('data-quiz');
   }
-  $('#container').load('assets/templates/quiz.html',
+  $('#container').load('assets/templates/quiz.php',
     function() {
       var quiz = categoriesActuales.items[categoryID-1].quiz[quizID-1];
       quiz['category'] = categoryID;

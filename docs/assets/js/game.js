@@ -78,7 +78,7 @@ function loadCards(){
 
 function flipCard() {
   console.log(pares);
-  
+  pop_card.play();
   if (lockBoard) console.log("Lock Board");
   
 
@@ -116,16 +116,23 @@ function checkForMatch() {
     disableCards(); // Deshabilitamos las cartas
     pares--;
     console.log("Menos un par");
+    setTimeout(() => {
+      pair.play();
+    }, 500);
     
     if (pares == 0) {
       console.log("Juego Terminado");
       finishedGame = true;
       setTimeout(() => {
         showNext(current);
+        finish.play();
       }, 1200);
     }
   }else{
     unflipCards(); // Las volteamos boca abajo
+    setTimeout(() => {
+      no_pair.play();
+    }, 500);
   }
 
 }
@@ -166,3 +173,15 @@ function resetBoard() {
     });    
   }
 })();
+
+
+var no_pair = new Audio();
+no_pair.src = "assets/audio/no-pair.mp3";
+var pair = new Audio();
+pair.src = "assets/audio/pair.mp3";
+var pop_card = new Audio();
+pop_card.src = "assets/audio/popcard.mp3";
+var finish = new Audio();
+finish.src = "assets/audio/finish.mp3";
+
+

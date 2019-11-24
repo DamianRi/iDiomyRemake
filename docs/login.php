@@ -73,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             setcookie("user", $_SESSION["username"]);
                             setcookie("score", $_SESSION["score"]);
                             setcookie("won-score", $_SESSION["score"]);
-                            
+                            setcookie("username", $_SESSION["username"]);
                             // Redirect user to index page
                             header("location: index.php");
                         } else{

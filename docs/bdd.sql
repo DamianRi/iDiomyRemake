@@ -11,7 +11,7 @@ CREATE TABLE users (
 
 
 CREATE TABLE scores(
-    idscore INT NOT NULL,
+    idscore INT NOT NULL AUTO_INCREMENT,
     iduser  INT NOT NULL,
     idioma VARCHAR(50) NOT NULL,
     categoria VARCHAR(50) NOT NULL,

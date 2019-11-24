@@ -43,23 +43,19 @@ $(function() {
     $(this).volverIntros();//Llamamos a la función para obtener las introducciones actuales
   });
 
-  /*
-  $('#container').on('click','.skip-intro',function(e){
-    e.preventDefault();
-    renderPanel(categories);
-  });
-*/
   /**
    * Función para desplegar el menú de los idiomas disponibles
    */
   $('#container').on('click','.skip-intro',function(e){
     e.preventDefault();
     renderIdiomas(idiomas);
+    play_intro();
+    console.log("Iniciando Skip Intro");
+    
   });
 
   $('#container').on('click','.volver-idiomas',function(e){
     console.log("Click Volver Idiomas");
-    
     e.preventDefault();
     renderIdiomas(idiomas);
   });
@@ -67,18 +63,21 @@ $(function() {
   //Alemán
   $('#container').on('click','.idioma1',function(e){
     e.preventDefault();
+    play_intro();
     renderPanel(categoriesAleman, 1);
   });
 
   //Italiano
   $('#container').on('click','.idioma2',function(e){
     e.preventDefault();
+    play_intro();
     renderPanel(categoriesItaliano, 2);
   });
 
   //Portugués
   $('#container').on('click','.idioma3',function(e){
     e.preventDefault();
+    play_intro();
     renderPanel(categoriesPortugues, 3);
   });
 

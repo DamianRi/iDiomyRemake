@@ -10,16 +10,16 @@ var botones = new Audio();
 botones.src = "assets/audio/drip.mp3";
 var current = 0;
 
-
+var username = getCookie("username").toUpperCase();
 
 $('#container').on('click', '.answer-button', function(){
   if (!$(".can").hasClass("hide")) return;
   var isCorrect = $(this).checkAnswer();
   var correct_answer = $(this).getCorrectAnswer();
-  var msg = "La respuesta correcta es <b>" + correct_answer + "</b>.<br>¡Ánimo, vamos con la siguiente!";
+  var msg = "La respuesta correcta es <b>" + correct_answer + "</b>.<br>¡Ánimo, "+ username+", vamos con la siguiente!";
   if (isCorrect) {
     correcto.play();
-    msg = "¡ACERTASTE, MUY BIEN HECHO!";
+    msg = "¡ACERTASTE, MUY BIEN HECHO "+username+"!";
     $(this).addClass('correcto').removeClass('answer-button');
   }else{
     incorrecto.play();
